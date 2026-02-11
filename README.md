@@ -1,77 +1,59 @@
-# Evaluaci-n-del-Riesgo-de-Cola
-Evaluación del Riesgo de Cola
+# Evaluación del Riesgo de Cola
 
-Evaluación del Riesgo de Cola
 Detección de Kurtosis Extremo en Acciones
-Descripción General
+
+## 📌Descripción General
 
 Este proyecto identifica acciones con riesgo elevado de movimientos extremos de precio, utilizando la kurtosis como métrica central.
 
 Mientras que la volatilidad mide la amplitud promedio de los movimientos, la kurtosis mide qué tan frecuentes y violentos son los eventos extremos.
 Una kurtosis significativamente mayor a 3 (valor de una distribución normal) indica colas gruesas (fat tails) y un riesgo no lineal que suele estar subestimado.
 
-Insight Clave
+## 📍Insight Clave
 
-¿Qué acciones presentan una probabilidad anormalmente alta de movimientos extremos?
+- ¿Qué acciones presentan una probabilidad anormalmente alta de movimientos extremos?
 
 Un valor de kurtosis elevado revela que:
+- los retornos no siguen una distribución normal,
+- los shocks de precio son más frecuentes de lo esperado,
+- el riesgo real es mayor al percibido por métricas tradicionales.
 
-los retornos no siguen una distribución normal,
-
-los shocks de precio son más frecuentes de lo esperado,
-
-el riesgo real es mayor al percibido por métricas tradicionales.
-
-Valor de Negocio
+## 💼Valor de Negocio
 
 Identifica activos peligrosos para estrategias de baja volatilidad.
 
 Fundamental para:
-
-gestión de riesgo,
-
-stress testing,
-
-modelos de cola (VaR no paramétrico, CVaR).
-
-Útil para evitar falsas sensaciones de estabilidad.
+- gestión de riesgo,
+- stress testing,
+- modelos de cola (VaR no paramétrico, CVaR).
+- Útil para evitar falsas sensaciones de estabilidad.
 
 Detecta activos propensos a:
-
-crashes,
-
-squeezes,
-
-eventos idiosincráticos.
+- crashes,
+- squeezes,
+- eventos idiosincráticos.
 
 Fuentes de Datos
+- indicadores_tecnicos
+- ticker_id
+- fecha
+- kurtosis
+- skewness
 
-indicadores_tecnicos
+## 🧠Lógica del Análisis
 
-ticker_id
+- Se analizan los retornos históricos de cada acción.
+- Se calcula la kurtosis de dichos retornos.
 
-fecha
-
-kurtosis
-
-skewness
-
-Lógica del Análisis
-
-Se analizan los retornos históricos de cada acción.
-
-Se calcula la kurtosis de dichos retornos.
-
-Se filtran los casos donde:
+- Se filtran los casos donde:
 
 kurtosis > 4.0
-
 
 indicando colas mucho más pesadas que una distribución normal.
 
 Se ordenan los resultados por severidad del riesgo.
 
-Interpretación de Resultados
+## 📊Interpretación de Resultados
 
 Kurtosis ≈ 3
 → Distribución cercana a normal.
@@ -87,38 +69,31 @@ Kurtosis > 6
 
 La skewness complementa el análisis indicando:
 
-si el riesgo extremo está sesgado a pérdidas,
+si el riesgo extremo está sesgado a pérdidas, o a ganancias explosivas.
 
-o a ganancias explosivas.
+## 🧩Casos de Uso
 
-Casos de Uso
+- Screening de activos de alto riesgo oculto.
+- Filtrado previo a carteras long-only.
+- Selección de subyacentes para estrategias de opciones.
+- Análisis previo a eventos corporativos.
+- Detección de fragilidad estructural.
 
-Screening de activos de alto riesgo oculto.
+## 🚀Posibles Extensiones
 
-Filtrado previo a carteras long-only.
+- Combinar kurtosis con volatilidad implícita.
+- Analizar kurtosis por sector o industria.
+- Medir persistencia del riesgo de cola en el tiempo.
+- Integrar con skewness para mapas de riesgo asimétrico.
+- Aplicar umbrales dinámicos según régimen de mercado.
 
-Selección de subyacentes para estrategias de opciones.
-
-Análisis previo a eventos corporativos.
-
-Detección de fragilidad estructural.
-
-Posibles Extensiones
-
-Combinar kurtosis con volatilidad implícita.
-
-Analizar kurtosis por sector o industria.
-
-Medir persistencia del riesgo de cola en el tiempo.
-
-Integrar con skewness para mapas de riesgo asimétrico.
-
-Aplicar umbrales dinámicos según régimen de mercado.
-
-Nota Final
+## ✒️Nota Final
 
 La volatilidad te dice cuánto se mueve el precio.
 La kurtosis te dice qué tan violento puede ser cuando se rompe todo.
 
 Este insight no predice eventos,
 pero te dice dónde no querés estar cuando ocurren ⚠️📉
+
+## 👤Autora
+Flavia Hepp Proyecto de SQL aplicó un análisis de riesgo basado en eventos.
