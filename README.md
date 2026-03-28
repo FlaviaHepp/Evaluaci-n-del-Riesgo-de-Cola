@@ -97,3 +97,58 @@ pero te dice dónde no querés estar cuando ocurren ⚠️📉
 
 ## 👤Autora
 Flavia Hepp Proyecto de SQL aplicó un análisis de riesgo basado en eventos.
+
+***
+⚠️ **No todas las acciones tienen el mismo tipo de riesgo… algunas esconden “colas gruesas”.**
+
+En el mercado solemos pensar en volatilidad como sinónimo de riesgo.
+
+Pero hay algo más peligroso:
+
+🧠 **el riesgo de eventos extremos.**
+
+---
+
+📊 En este análisis busqué acciones con:
+
+👉 **kurtosis > 4.0**
+(cuando 3.0 sería una distribución “normal”)
+
+---
+
+💡 ¿Qué significa esto?
+
+* Mayor probabilidad de movimientos extremos
+* Eventos raros… pero mucho más frecuentes de lo esperado
+* Distribuciones con **“fat tails”**
+
+---
+
+🚨 En otras palabras:
+
+👉 Estas acciones pueden parecer tranquilas…
+hasta que dejan de serlo de golpe.
+
+---
+
+📉 Insight clave:
+**El verdadero riesgo no siempre está en lo que ves todos los días…
+sino en lo que ocurre muy pocas veces.**
+
+---
+
+🔍 ¿Por qué importa?
+
+Porque permite:
+✔️ Detectar activos con riesgo oculto
+✔️ Ajustar tamaño de posición
+✔️ Evitar sorpresas extremas
+
+---
+
+📊 En trading cuantitativo, no alcanza con medir volatilidad…
+hay que entender la *forma completa de la distribución*.
+
+---
+
+#Quant #DataScience #Trading #RiskManagement #Kurtosis #FatTails #Finanzas
